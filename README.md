@@ -20,10 +20,10 @@ This project is mainly focused on Apache 1.1, and demonstrates how to manage SCD
 
 ## Result
 
-* [Hive Result Demo](hive_hbase_scd2_hive_screenshot.png "Hive Result Demo")
+![Hive Result Demo](hive_hbase_scd2_hive_screenshot.png "Hive Result Demo")
 
-* [HBase Result Demo](hive_hbase_scd2_hbase_screenshot.png "HBase Result Demo")
+![HBase Result Demo](hive_hbase_scd2_hbase_screenshot.png "HBase Result Demo")
 
-* Each Row Key in HBase has at most 2 versions: 
+Each Row Key in HBase has at most 2 versions: 
   - initial load version, with 1999/01/01 as valid_from and 9999/12/31 as valid_to
   - obsolete version, with 1999/01/01 as valid_from and current_date as valid_to

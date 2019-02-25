@@ -1,6 +1,7 @@
 # Managing Slowly Changing Dimensions Type2 (SCD2) with Apache Hive 1.1(w/o UPDATE operation) and HBase 1.2 
 
-Forked from cartershanklin/hive-scd-examples, which provides sample datasets and scripts that demonstrate how to manage Slowly Changing Dimensions (SCDs) with Apache Hive's ACID MERGE capabilities, this project mainly focused on Apache 1.1 when there is no MERGE or UPDATE capabilities.
+This project is forked from cartershanklin/hive-scd-examples, which provides sample datasets and scripts. 
+This project is mainly focused on Apache 1.1, and demonstrates how to manage Slowly Changing Dimensions Type2 (SCD2) without Apache Hive's MERGE or UPDATE capability.
 
 ## Procedure
 

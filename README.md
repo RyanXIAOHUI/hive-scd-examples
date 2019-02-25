@@ -1,12 +1,6 @@
-# Managing Slowly Changing Dimensions (SCDs) with Apache Hive
+# Managing Slowly Changing Dimensions Type2 (SCD2) with Apache Hive 1.1 and HBase 1.2 w/o HiveQL update operation
 
-This project provides sample datasets and scripts that demonstrate how to manage Slowly Changing Dimensions (SCDs) with Apache Hive's ACID MERGE capabilities. Using ACID MERGE allows all updates to be applied atomically, ensure readers see all updates or no updates, and handles failure scenarios, rather than requiring application developers to build these things themselves.
-
-Also included is data that simulates a full data dump from a source system, followed by another data dump taken later.
-
-The objective is to merge the data using different styles of [slowly-changing dimension strategies](https://en.wikipedia.org/wiki/Slowly_changing_dimension)
-
-These examples cover [Type 1](hive_type1_scd.sql), [Type 2](hive_type2_scd.sql) and [Type 3](hive_type3_scd.sql) updates.
+Forked from cartershanklin/hive-scd-examples, which provides sample datasets and scripts that demonstrate how to manage Slowly Changing Dimensions (SCDs) with Apache Hive's ACID MERGE capabilities, this project mainly focused on Apache 1.1 when there is no MERGE or UPDATE capabilities.
 
 ## Procedure
 
@@ -14,8 +8,8 @@ These examples cover [Type 1](hive_type1_scd.sql), [Type 2](hive_type2_scd.sql) 
 
 ## Requirements
 
-* [Hortonworks Data Platform](https://hortonworks.com/downloads/) (HDP) 2.6 or later
-* OR [Apache Hive](https://hive.apache.org/) 2.2 or later
+* [Apache Hive](https://hive.apache.org/) 1.1 or later
+* [Apache HBase](https://hbase.apache.org/) 1.2 or later
 
 ## Instructions
 

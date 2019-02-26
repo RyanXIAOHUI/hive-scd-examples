@@ -100,7 +100,7 @@ select
   cast('9999-12-31' as date) as valid_to
 from scd2_contacts_update_stage, scd2_contacts_target
 where scd2_contacts_target.info_code = scd2_contacts_update_stage.id
-and scd2_contacts_target.valid_to = cast('9999-12-31' as date)
+and scd2_contacts_target.valid_to = cast(current_date() as date)
 and (scd2_contacts_update_stage.name <> scd2_contacts_target.info_name or scd2_contacts_update_stage.email <> scd2_contacts_target.info_email or scd2_contacts_update_stage.state <> scd2_contacts_target.info_state)
 ;
 

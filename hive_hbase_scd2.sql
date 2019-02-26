@@ -1,6 +1,3 @@
--- This example demonstrates Type 2 Slowly Changing Dimensions in Hive 1.1.
--- Be sure to stage data in before starting (load_data.sh)
-
 -- SCD2 implementation
 
 -- This example demonstrates Type 2 Slowly Changing Dimensions in Hive.

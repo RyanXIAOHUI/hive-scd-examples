@@ -52,11 +52,13 @@ create external table scd2_contacts_update_stage(id int, name string, email stri
   row format delimited fields terminated by ',' stored as textfile
   location '/tmp/merge_data/update_stage';
 
--- 1. Load New Records
+-- set hive parameters
 set hive.auto.convert.join = false;
 set hive.ignore.mapjoin.hint=false;
 set hive.exec.parallel=true;
 
+-- 1. Load New Records
+-- Use left-outer-join to simulate not-equal-to-join
 insert into scd2_contacts_target
 select
   concat('19000101-', lpad(scd2_contacts_update_stage.id, 10, '0')) as row_key,
@@ -99,3 +101,4 @@ from scd2_contacts_update_stage, scd2_contacts_target
 where scd2_contacts_target.info_code = scd2_contacts_update_stage.id
 and (scd2_contacts_update_stage.name <> scd2_contacts_target.info_name or scd2_contacts_update_stage.email <> scd2_contacts_target.info_email or scd2_contacts_update_stage.state <> scd2_contacts_target.info_state)
 ;
+

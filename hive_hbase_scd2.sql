@@ -13,7 +13,7 @@ use hbase_test;
 -- For example: 19000101-0000000001, 20190225-0000000032.
 
 -- The Hive managed table also track a start and end date
--- These are SCD2 required fields and nullable are not allowed(In HBase, null value not stored).
+-- These are SCD2 required fields and are not allowed to be null(In HBase, null value is not stored).
 
 create table scd2_contacts_target(
   row_key string comment 'surrogate key and hbase row key',
